@@ -1,9 +1,12 @@
+import React, { Component } from 'react';
 import './card.css'
 
-function card() {
-    return (
-        <div class="card">
-            
-        </div>
-    )
+export default class Card extends Component {
+    render() {
+        return (
+            <div style={{backgroundColor: this.props.color}} className="card">
+                <h1>{this.props.title}</h1>
+            </div>
+        )
+    }
 }
