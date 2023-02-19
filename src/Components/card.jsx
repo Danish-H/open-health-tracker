@@ -5,6 +5,9 @@ export default class Card extends Component {
     render() {
         return (
         <div className="card">
+            {!this.props.showbg && (
+                <div className="cardbg" style={{backgroundColor: this.props.bgcolor}}></div>
+            )}
             {this.props.showbg && (
                 <div>
                     <div className="cardbg" style={{backgroundColor: this.props.bgcolor, transform: "rotate(1.73deg)"}}></div>
