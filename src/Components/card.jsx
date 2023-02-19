@@ -9,7 +9,7 @@ export default class Card extends Component {
             <div className="cardbg" style={{backgroundColor: this.props.bgcolor, transform: "rotate(-1.73deg)"}}></div>
             <h1>{this.props.title}</h1>
             {this.props.children}
-            <a className="expand"></a>
+            <span className="expand"></span>
         </div>
         )
     }
