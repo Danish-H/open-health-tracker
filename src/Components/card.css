@@ -13,6 +13,7 @@
     font-size: medium;
 }
 .card::before {
+    content: ""; /*TODO: figure out why it breaks without this*/
     transform: rotate(2.26deg);
     background-color: #DDF6D7;
     display: block;
@@ -24,5 +25,4 @@
     z-index: -1;
     border-radius: 16px;
     opacity: 42%;
-    box-shadow: black;
 }
