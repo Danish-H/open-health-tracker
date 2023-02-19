@@ -1,12 +1,13 @@
 #profile {
     float: right;
     display: inline;
-  }
+}
   
 #header h1 {
-display: inline;
-color: #555555
+    display: inline;
+    color: #555555
 }
+
 #header span {
-  color: black;
+    color: black;
 }
