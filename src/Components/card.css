@@ -12,10 +12,8 @@
     opacity: 60%;
     font-size: medium;
 }
-.card::before {
-    content: ""; /*TODO: figure out why it breaks without this*/
+.card .cardbg {
     transform: rotate(2.26deg);
-    background-color: #DDF6D7;
     display: block;
     position: absolute;
     top: 0;
