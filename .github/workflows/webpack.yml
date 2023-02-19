@@ -24,4 +24,5 @@ jobs:
 
     - name: Build
       run: |
+        nom install
         npm run build
