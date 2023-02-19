@@ -5,12 +5,12 @@
     return (
         <div id="root">
         <div id="header">
-          <h1><span class="gray" alt="profile">Hello</span> Faish!</h1>
-          <img id="profile" src="profile.svg"></img>
-          <Card color="#DDF6D7" title="Hows it going?">
-            <p>stuff here</p>
-          </Card>
+          <h1><span class="gray">Hello</span> Faish!</h1>
+          <img id="profile" src="profile.svg" alt="profile"></img> 
         </div>
+        <Card color="#e9fae4" title="Hows it going?">
+          <p>stuff here</p>
+        </Card>
       </div>
     );
   }
