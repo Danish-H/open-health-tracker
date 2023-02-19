@@ -1,17 +1,4 @@
-.gray {
-  color: #555555;
-}
-
 body {
   font-family: Helvetica, Arial, sans-serif;
   padding: 3%;
-}
-
-#profile {
-  float: right;
-  display: inline;
-}
-
-#header h1 {
-  display: inline;
 }
