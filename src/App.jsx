@@ -9,10 +9,10 @@
         <Card bgcolor="#eee" title="This Week in a Glance">
           <p>stuff here</p>
         </Card>
-        <Card bgcolor="#DDF6D7" title="How's it going?">
+        <Card bgcolor="#DDF6D7" title="How's it going?" showbg>
           <p>stuff here</p>
         </Card>
-        <Card bgcolor="#D7EBF6" title="Medication Tracker">
+        <Card bgcolor="#D7EBF6" title="Medication Tracker" showbg>
           <p>stuff here</p>
         </Card>
       </div>
