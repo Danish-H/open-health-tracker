@@ -5,10 +5,10 @@ export default class Card extends Component {
     render() {
         return (
         <div className="card">
-            {!this.props.showbg && (
+            {!this.props.showbg && ( // Show a single unrotated card if cardbg is false or undefined
                 <div className="cardbg" style={{backgroundColor: this.props.bgcolor}}></div>
             )}
-            {this.props.showbg && (
+            {this.props.showbg && ( // Show 2 cards with rotation if cardbg is true
                 <div>
                     <div className="cardbg" style={{backgroundColor: this.props.bgcolor, transform: "rotate(1.73deg)"}}></div>
                     <div className="cardbg" style={{backgroundColor: this.props.bgcolor, transform: "rotate(-1.73deg)"}}></div>
