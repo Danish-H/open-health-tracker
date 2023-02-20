@@ -1,13 +1,13 @@
 import { Component } from 'react'
 import './header.css'
+import { useOidc } from '@axa-fr/react-oidc'
 
-export default class Header extends Component {
-    render() {
-        return (
-            <div id="header">
-                <h1>Hello <span>{this.props.name}</span>!</h1>
-                <img id="profile" src={this.props.pfp} alt="profile"/>
-            </div>
-        )
-    }
+export default function Header (props) {
+    const { logout } = useOidc();
+    return (
+        <div id="header">
+            <h1>Hello <span>{props.name}</span>!</h1>
+            <img id="profile" src={props.pfp} alt="profile" onClick={logout}/>
+        </div>
+    )
 }
