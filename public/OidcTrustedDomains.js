@@ -5,5 +5,5 @@
 // Domains used by OIDC server must be also declared here
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const trustedDomains = {
-    default: ['https://sso.hbigroup.org'],
+    default: ['https://sso.hbigroup.org', "https://oht.gradyn.com/api", "http://localhost:5085"],
 };

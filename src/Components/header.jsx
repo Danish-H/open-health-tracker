@@ -1,4 +1,3 @@
-import { Component } from 'react'
 import './header.css'
 import { useOidc } from '@axa-fr/react-oidc'
 

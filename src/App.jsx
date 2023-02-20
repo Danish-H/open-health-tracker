@@ -3,17 +3,19 @@ import Card from './Components/card'
 import Header from './Components/header'
 import EmojiButton from './Components/emoji-button';
 import {useOidcUser, OidcUserStatus} from '@axa-fr/react-oidc';
+import { GetJournalSummary } from './api';
 
 function App() {
   const {oidcUser, oidcUserLoadingState} = useOidcUser();
   switch (oidcUserLoadingState) {
     case OidcUserStatus.Loading:
-      return <p>User Information are loading</p>;
+      return <p>User Information loading</p>;
     case OidcUserStatus.Unauthenticated:
       return <p>you are not authenticated</p>;
     case OidcUserStatus.LoadingError:
       return <p>Fail to load user information</p>;
     default:
+      const summary = GetJournalSummary();
       return (
         <div>
           <Header name={oidcUser.given_name} pfp="profile.svg"/>
