@@ -2,3 +2,14 @@ body {
   font-family: Helvetica, Arial, sans-serif;
   padding: 3%;
 }
+
+@media screen and (min-width: 640px) {
+    body {
+        max-width: 464px;
+        max-height: 956px;
+        margin: 5% auto;
+        padding: 60px;
+        border-radius: 30px;
+        box-shadow: 0px 5px 10px 1px rgba(0, 0, 0, 0.15);
+    }
+}
