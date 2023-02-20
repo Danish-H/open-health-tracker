@@ -1,19 +1,22 @@
 .emoji-button {
-    min-width: 42px;
-    min-height: 42px;
+    min-width: 48px;
+    min-height: 48px;
     margin: 4px;
-    border-radius: 8px;
+    border-radius: 13px;
     display: inline-block;
-    background-color: rgba(0, 0, 0, 0.15);
+    background-color: #CAEAD3;
+    -webkit-transition: 0.1s;
+            transition: 0.1s;
 }
 
 .emoji-button:active {
-    background-color: rgba(0, 0, 0, 0.25);
+    background-color: #aac4b1;
 }
 
 .emoji-button span {
-    margin: 5px;
+    margin: 6px;
     display: block;
-    width: 32px;
-    height: 32px;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
 }
