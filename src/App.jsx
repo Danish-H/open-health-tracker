@@ -1,11 +1,13 @@
   import './App.css';
   import Card from './Components/card'
   import Header from './Components/header'
+  import { useAuth } from 'oidc-react';
 
   function App() {
+    console.log(useAuth())
     return (
-      <div id="root">
-        <Header name="Faish" pfp="profile.svg"/>
+      <div>
+        <Header name="test" pfp="profile.svg"/>
         <Card bgcolor="#eee" title="This Week in a Glance">
           <p>stuff here</p>
         </Card>
