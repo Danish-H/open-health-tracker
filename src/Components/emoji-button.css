@@ -5,6 +5,7 @@
     border-radius: 13px;
     display: inline-block;
     background-color: #CAEAD3;
+    cursor: pointer;
     -webkit-transition: 0.1s;
             transition: 0.1s;
 }
@@ -18,5 +19,4 @@
     display: block;
     width: 36px;
     height: 36px;
-    cursor: pointer;
 }
