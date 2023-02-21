@@ -4,5 +4,5 @@ export const oidc_configuration = {
     scope: 'openid profile email offline_access',
     authority: 'https://sso.hbigroup.org/realms/openhealthtracker',
     service_worker_relative_url:'/OidcServiceWorker.js',
-    service_worker_only:true,
+    service_worker_only:false,
   };
