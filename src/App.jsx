@@ -5,6 +5,7 @@ import {useOidcUser, OidcUserStatus} from '@axa-fr/react-oidc';
 import { GetJournalSummary } from './api.jsx'
 import React, { useEffect, useState } from 'react';
 import EmojiButton from './Components/emoji-button';
+import Slideup from './Components/Slideup';
 
 function App() {
   const [summary, setSummary] = useState({emotions: []});
@@ -21,7 +22,7 @@ function App() {
       return <p>Fail to load user information</p>;
     default:
         return (
-          <div>
+          <div style={{position:'relative'}}>
             <Header name={oidcUser.given_name} pfp="profile.svg"/>
             <Card bgcolor="#eee" title="This Week in a Glance">
               <p>stuff here</p>
@@ -36,6 +37,7 @@ function App() {
             <Card bgcolor="#D7EBF6" title="Medication Tracker" showbg>
               <p>stuff here</p>
             </Card>
+            <Slideup/>
           </div>
         );
   }
