@@ -23,6 +23,7 @@ function App() {
     default:
         return (
           <div style={{position:'relative'}}>
+            <div id='home'>
             <Header name={oidcUser.given_name} pfp="profile.svg"/>
             <Card bgcolor="#eee" title="This Week in a Glance">
               <p>stuff here</p>
@@ -37,7 +38,8 @@ function App() {
             <Card bgcolor="#D7EBF6" title="Medication Tracker" showbg>
               <p>stuff here</p>
             </Card>
-            <Slideup/>
+          </div>
+          <Slideup/>
           </div>
         );
   }
