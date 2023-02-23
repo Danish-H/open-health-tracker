@@ -6,9 +6,11 @@ import { GetJournalSummary } from './api.jsx'
 import React, { useEffect, useState } from 'react';
 import EmojiButton from './Components/emoji-button';
 import Slideup from './Components/Slideup';
+import { Screens } from "./screens.ts"
 
 function App() {
   const [summary, setSummary] = useState({emotions: []});
+  const [screen, setScreen] = useState(Screens.Home);
   useEffect(() => {
     GetJournalSummary().then(result => {setSummary(result)});
   }, [])
@@ -31,7 +33,7 @@ function App() {
             <Card bgcolor="#DDF6D7" title="How's it going?" showbg>
               <div>
               {summary.emotions.map(x => {
-                return <EmojiButton src={"https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/" + x.icon + ".svg"}/>
+                return <EmojiButton onClick={() => {setScreen(Screens.Journal)}} src={"https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/" + x.icon + ".svg"}/>
               }).reverse()}
               </div>
             </Card>
@@ -39,7 +41,7 @@ function App() {
               <p>stuff here</p>
             </Card>
           </div>
-          <Slideup/>
+          <Slideup shown={screen === Screens.Journal}/>
           </div>
         );
   }
