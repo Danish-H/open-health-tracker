@@ -41,7 +41,7 @@ function App() {
               <p>stuff here</p>
             </Card>
           </div>
-          <Slideup shown={screen === Screens.Journal}/>
+          <Slideup onClose={() => {setScreen(Screens.Home)}} shown={screen === Screens.Journal}/>
           </div>
         );
   }
