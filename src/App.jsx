@@ -7,7 +7,7 @@ import React, { useEffect, useState } from 'react';
 import EmojiButton from './Components/emoji-button';
 import Slideup from './Components/Slideup';
 import { Screens } from "./screens.ts"
-import EmotionCategory from './Components/EmotionCategory';
+import EmotionCategory from './Components/emotion-category';
 
 function App() {
   const [summary, setSummary] = useState({emotionCategories: []});
@@ -36,7 +36,7 @@ function App() {
               <div>
               {summary.emotionCategories.length > 0 && summary.emotionCategories.filter(x => x.default)[0].emotions.map(x => {
                 return <EmojiButton onClick={() => {setScreen(Screens.Journal)}} src={"https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/" + x.icon + ".svg"}/>
-              }).reverse()}
+              })}
               </div>
             </Card>
             <Card bgcolor="#D7EBF6" title="Medication Tracker" showbg>
