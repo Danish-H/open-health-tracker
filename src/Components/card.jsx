@@ -16,7 +16,7 @@ export default class Card extends Component {
             )}
             <h1>{this.props.title}</h1>
             {this.props.children}
-            <span className="expand"></span>
+            <span onClick={this.props.onClick} className="expand"></span> {/* note: this onClick has to be different from the other because it doesnt select a mood as well */}
         </div>
         )
     }

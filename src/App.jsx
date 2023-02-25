@@ -30,7 +30,7 @@ function App() {
             <Card bgcolor="#eee" title="This Week in a Glance">
               <p>stuff here</p>
             </Card>
-            <Card bgcolor="#DDF6D7" title="How's it going?" showbg>
+            <Card onClick={() => {setScreen(Screens.Journal)}} bgcolor="#DDF6D7" title="How's it going?" showbg>
               <div>
               {summary.emotions.map(x => {
                 return <EmojiButton onClick={() => {setScreen(Screens.Journal)}} src={"https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/" + x.icon + ".svg"}/>
