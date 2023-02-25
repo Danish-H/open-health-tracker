@@ -1,5 +1,6 @@
 #root {
     padding-top: 30px;
+    overflow: hidden;
 }
 
 body {
