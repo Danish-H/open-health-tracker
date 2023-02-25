@@ -3,10 +3,16 @@
     padding: 8px;
     margin: 2px;
     border-radius: 15px;
-    display: inline-block;
     background-color: #CAEAD3;
     text-align: left;
     float: left;
+    cursor: pointer;
+    -webkit-transition: 0.1s;
+            transition: 0.1s;
+}
+
+.emotion-button.selected, .emotion-button:active {
+    background-color: #aac4b1;
 }
 
 .emotion-button img {
