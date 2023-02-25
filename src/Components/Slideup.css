@@ -1,9 +1,15 @@
 .slideup {
     position: absolute;
-    top: 10px;
+    top: 100%;
     bottom: 0px;
     left: 0px;
     right: 0px;
     text-align: center;
     background-color: white;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+.open {
+    visibility: visible;
+    top: 0%;
 }
