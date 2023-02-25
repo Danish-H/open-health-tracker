@@ -1,4 +1,11 @@
 #root {
     padding-top: 30px;
-    padding-bottom: 20px;
+}
+
+body {
+    margin: 0;
+}
+
+#home {
+    margin: 8px;
 }
