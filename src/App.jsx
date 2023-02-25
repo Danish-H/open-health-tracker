@@ -44,7 +44,9 @@ function App() {
             </Card>
           </div>
           <Slideup onClose={() => {setScreen(Screens.Home)}} shown={screen === Screens.Journal}>
-            <EmotionCategory name="Overall Mood"></EmotionCategory>
+            {summary.emotionCategories.map(x => {
+              return <EmotionCategory name={x.name} emotions={x.emotions}></EmotionCategory>
+            })}
           </Slideup>
           </div>
         );
