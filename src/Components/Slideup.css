@@ -7,7 +7,8 @@
     text-align: center;
     background-color: white;
     visibility: hidden;
-    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+            transition: all 0.3s ease;
 }
 .open {
     visibility: visible;

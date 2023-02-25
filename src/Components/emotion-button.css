@@ -19,12 +19,10 @@
     margin-right: 5px;
     height: 18px;
     float: left;
-    display: inline-block;
 }
 
 .emotion-button p {
     padding: 0;
-    float: right;
     margin: 0;
     display: inline-block;
 }
