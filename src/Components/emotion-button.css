@@ -1,5 +1,24 @@
 .emotion-button {
-    height: 15px;
-    display: flex;
-    align-items: baseline;
+    min-width: 50px;
+    padding: 8px;
+    margin: 2px;
+    border-radius: 15px;
+    display: inline-block;
+    background-color: #CAEAD3;
+    text-align: left;
+    float: left;
+}
+
+.emotion-button img {
+    margin-right: 5px;
+    height: 18px;
+    float: left;
+    display: inline-block;
+}
+
+.emotion-button p {
+    padding: 0;
+    float: right;
+    margin: 0;
+    display: inline-block;
 }
