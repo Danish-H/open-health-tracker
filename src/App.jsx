@@ -2,14 +2,15 @@ import './App.css';
 import Card from './Components/card'
 import Header from './Components/header'
 import {useOidcUser, OidcUserStatus} from '@axa-fr/react-oidc';
-import { GetJournalSummary } from './api.jsx'
+import { GetJournalSummary } from './api.tsx'
 import React, { useEffect, useState } from 'react';
 import EmojiButton from './Components/emoji-button';
 import Slideup from './Components/Slideup';
 import { Screens } from "./screens.ts"
+import EmotionCategory from './Components/EmotionCategory';
 
 function App() {
-  const [summary, setSummary] = useState({emotions: []});
+  const [summary, setSummary] = useState({emotionCategories: []});
   const [screen, setScreen] = useState(Screens.Home);
   useEffect(() => {
     GetJournalSummary().then(result => {setSummary(result)});
@@ -23,6 +24,7 @@ function App() {
     case OidcUserStatus.LoadingError:
       return <p>Fail to load user information</p>;
     default:
+      console.log(summary)
         return (
           <div style={{position:'relative'}}>
             <div id='home'>
@@ -32,7 +34,7 @@ function App() {
             </Card>
             <Card onClick={() => {setScreen(Screens.Journal)}} bgcolor="#DDF6D7" title="How's it going?" showbg>
               <div>
-              {summary.emotions.map(x => {
+              {summary.emotionCategories.length > 0 && summary.emotionCategories.filter(x => x.default)[0].emotions.map(x => {
                 return <EmojiButton onClick={() => {setScreen(Screens.Journal)}} src={"https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/" + x.icon + ".svg"}/>
               }).reverse()}
               </div>
@@ -42,6 +44,7 @@ function App() {
             </Card>
           </div>
           <Slideup onClose={() => {setScreen(Screens.Home)}} shown={screen === Screens.Journal}>
+            <EmotionCategory name="Overall Mood"></EmotionCategory>
           </Slideup>
           </div>
         );

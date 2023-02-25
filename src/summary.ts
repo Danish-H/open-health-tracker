@@ -1,7 +1,10 @@
 export class Summary {
     recent: Entry[];
-    emotions: Emotion[];
     activities: Activity[]; 
+    emotionCategories: EmotionCategory[] = [];
+    get emotions(): Emotion[] {
+        return this.emotionCategories.flatMap(x => x.emotions)
+    }
 }
 
 export class Entry {
