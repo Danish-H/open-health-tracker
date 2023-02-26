@@ -14,7 +14,7 @@ export default function Card(props) {
         )}
         <h1>{props.title}</h1>
         {props.children}
-        <span onClick={props.onClick} className="expand"></span> {/* note: this onClick has to be different from the other because it doesnt select a mood as well */}
+        <img className="expand" src="wide-arrow.svg" onClick={props.onClick}></img> {/* note: this onClick has to be different from the other because it doesnt select a mood as well */}
     </div>
     )
 }

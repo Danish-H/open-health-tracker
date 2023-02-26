@@ -28,14 +28,7 @@
 
 .expand {
     cursor: pointer;
-    margin-top: 10px;
-    border-style: solid;
-    border-radius: 2px;
-    border-color: #aaa;
     opacity: 40%;
-    border-width: 0 3px 3px 0;
     display: inline-block;
-    padding: 7px;
-    -webkit-transform: scale(2.3, 1) rotate(45deg);
-            transform: scale(2.3, 1) rotate(45deg);
+    padding: 15px 30px 5px 30px;
 }
