@@ -25,28 +25,34 @@
     padding: 0;
     position: absolute;
     right: 0;
-    top: 20px;
+    top: 0;
     overflow: hidden;
     z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: opacity 0.3s, top 0.3s, visibility 0.3s;
+            transition: opacity 0.3s, top 0.3s, visibility 0.3s;
+}
+
+#header ul.open {
+    top: 20px;
+    opacity: 1;
+    visibility: visible;
+    -webkit-transition: opacity 0.3s, top 0.3s, visibility 0s;
+            transition: opacity 0.3s, top 0.3s, visibility 0s;
 }
 
 #header ul li {
     font-size: 18px;
     padding: 12px 20px;
+    position: relative;
     color: #555;
+    z-index: 1200;
     cursor: pointer;
 }
 
 #header ul li:active {
     background-color: #EEE;
-}
-
-ul {
-    opacity: 0;
-}
-
-ul.open {
-    opacity: 1;
 }
 
 ul li#signout {
