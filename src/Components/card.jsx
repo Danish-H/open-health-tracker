@@ -1,23 +1,20 @@
-import React, { Component } from 'react';
 import './card.css'
 
-export default class Card extends Component {
-    render() {
-        return (
-        <div className="card">
-            {!this.props.showbg && ( // Show a single unrotated card if cardbg is false or undefined
-                <div className="cardbg" style={{backgroundColor: this.props.bgcolor}}></div>
-            )}
-            {this.props.showbg && ( // Show 2 cards with rotation if cardbg is true
-                <div>
-                    <div className="cardbg" style={{backgroundColor: this.props.bgcolor, transform: "rotate(1.73deg)"}}></div>
-                    <div className="cardbg" style={{backgroundColor: this.props.bgcolor, transform: "rotate(-1.73deg)"}}></div>
-                </div>
-            )}
-            <h1>{this.props.title}</h1>
-            {this.props.children}
-            <span onClick={this.props.onClick} className="expand"></span> {/* note: this onClick has to be different from the other because it doesnt select a mood as well */}
-        </div>
-        )
-    }
+export default function Card(props) {
+    return (
+    <div className="card">
+        {!props.showbg && ( // Show a single unrotated card if cardbg is false or undefined
+            <div className="cardbg" style={{backgroundColor: props.bgcolor}}></div>
+        )}
+        {props.showbg && ( // Show 2 cards with rotation if cardbg is true
+            <div>
+                <div className="cardbg" style={{backgroundColor: props.bgcolor, transform: "rotate(1.73deg)"}}></div>
+                <div className="cardbg" style={{backgroundColor: props.bgcolor, transform: "rotate(-1.73deg)"}}></div>
+            </div>
+        )}
+        <h1>{props.title}</h1>
+        {props.children}
+        <span onClick={props.onClick} className="expand"></span> {/* note: this onClick has to be different from the other because it doesnt select a mood as well */}
+    </div>
+    )
 }

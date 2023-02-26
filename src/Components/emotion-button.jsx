@@ -1,9 +1,9 @@
 import "./emotion-button.css"
 
-export default function EmotionButton(props) {
+export default function EmotionButton({name = "", icon = "", selected = false}) {
     return (
-        <div className="emotion-button">
-            <img src={props.icon}></img>
-            <span>{props.name}</span>
+        <div className={!selected ? "emotion-button" : "emotion-button selected"}>
+            <img src={icon}></img>
+            <span>{name}</span>
         </div>)
 }

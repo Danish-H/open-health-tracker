@@ -1,10 +1,10 @@
 import { Component } from "react";
 import './emoji-button.css'
 
-export default function EmojiButton (props) {
+export default function EmojiButton ({onClick = () => {}, src=""}) {
             return (
-            <div className="emoji-button" onClick={props.onClick}>
-                <span style={{backgroundImage: "url("+props.src+")"}}></span>
+            <div className="emoji-button" onClick={onClick}>
+                <span style={{backgroundImage: "url("+src+")"}}></span>
             </div>
         )
     }
