@@ -1,10 +1,10 @@
+body {
+    margin: 0;
+}
+
 #root {
     padding: 30px 14px 0 14px;
     overflow: hidden;
-}
-
-body {
-    margin: 0;
 }
 
 #home {

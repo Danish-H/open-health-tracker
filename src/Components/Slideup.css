@@ -10,6 +10,7 @@
     -webkit-transition: all 0.3s ease;
             transition: all 0.3s ease;
 }
+
 .open {
     visibility: visible;
     top: 0%;
