@@ -17,7 +17,9 @@
     height: 100vh; /*Workaround to remove gap below slide ups in small screen mode. might be a better way to do this*/
 }
 
-.slideup > .expand {
+/* animated rotating expand button - unsure if it looks nice */
+
+/* .slideup > .expand {
     transform: rotate(180deg);
     -webkit-transition: transform 0.5s ease;
             transition: transform 0.5s ease;
@@ -25,4 +27,4 @@
 
 .slideup.open > .expand {
     transform: rotate(0);
-}
+} */
