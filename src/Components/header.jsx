@@ -11,7 +11,7 @@ export default function Header (props) {
             <img id="user" src={props.pfp} alt="user" onClick={() => {setProfileMenu(true)}} />
             <ul className={profileMenu? "open" : ""}>
                 <div class="background" onClick={() => {setProfileMenu(false)}} ></div>
-                <li id="profile"><img src="profile.svg" alt="profile"/> Profile</li>
+                <li onClick={() => {window.location = "https://sso.hbigroup.org/realms/openhealthtracker/account/"}} id="profile"><img src="profile.svg" alt="profile"/> Profile</li>
                 <li id="settings"><img src="settings.svg" alt="profile"/> Settings</li>
                 <li id="signout" onClick={logout}><img src="signout.svg" alt="profile"/> Sign Out</li>
             </ul>
