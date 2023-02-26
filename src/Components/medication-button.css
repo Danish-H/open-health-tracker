@@ -1,0 +1,48 @@
+.medication-button {
+    color: rgba(0, 0, 0, 0.5);
+    min-width: 48px;
+    width: 100%;
+    margin: 4px 0;
+    border-radius: 13px;
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.08);
+    -webkit-transition: 0.1s;
+            transition: 0.1s;
+}
+
+.medication-button span {
+    color: rgba(0, 0, 0, 0.5);
+    display: inline;
+    font-size: 22px;
+    margin: 10px;
+    float: left;
+}
+
+.medication-button span.time {
+    color: rgba(0, 0, 0, 0.3);
+    font-size: 16px;
+    margin: 14px 0;
+    float: left;
+}
+
+.medication-button a,
+.medication-button a:active,
+.medication-button a:visited,
+.medication-button a:hover
+{
+    cursor: pointer;
+    color: #CCD8E0;
+    font-size: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    float: right;
+    padding: 4px;
+    margin: 10px;
+    border-radius: 6px;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.medication-button a:active {
+    background-color: rgba(0, 0, 0, 0.6);
+}

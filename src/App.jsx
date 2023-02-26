@@ -5,6 +5,7 @@ import {useOidcUser, OidcUserStatus} from '@axa-fr/react-oidc';
 import { GetJournalSummary } from './api.tsx'
 import React, { useEffect, useState } from 'react';
 import EmojiButton from './Components/emoji-button';
+import MedicationButton from './Components/medication-button';
 import Slideup from './Components/Slideup';
 import { Screens } from "./screens.ts"
 import EmotionCategory from './Components/emotion-category';
@@ -40,7 +41,8 @@ function App() {
               </div>
             </Card>
             <Card bgcolor="#D7EBF6" title="Medication Tracker" showbg>
-              <p>stuff here</p>
+              <MedicationButton name="Acrinintol" time="12:30pm" />
+              <MedicationButton name="Enzatrope" time="6:30pm" />
             </Card>
           </div>
           <Slideup onClose={() => {setScreen(Screens.Home)}} shown={screen === Screens.Journal}>
