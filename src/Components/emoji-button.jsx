@@ -1,4 +1,3 @@
-import { Component } from "react";
 import './emoji-button.css'
 
 export default function EmojiButton ({onClick = () => {}, src=""}) {
