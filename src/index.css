@@ -17,7 +17,7 @@ body {
     #home {
         padding: 30px;
     }
-    .open {
+    .slideup.open {
         height: 100% !important; /*Workaround to remove gap below slide ups in small screen mode. might be a better way to do this*/
     }
 }
