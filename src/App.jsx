@@ -41,6 +41,7 @@ function App() {
               </div>
             </Card>
             <Card bgcolor="#D7EBF6" title="Medication Tracker" showbg>
+              {/* These are just temporary placeholders for medications */}
               <MedicationButton name="Acrinintol" time="12:30pm" />
               <MedicationButton name="Enzatrope" time="6:30pm" />
             </Card>
