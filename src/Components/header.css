@@ -1,6 +1,7 @@
 #profile {
     float: right;
     display: inline;
+    cursor: pointer;
 }
   
 #header h1 {
