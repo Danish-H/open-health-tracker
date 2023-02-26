@@ -5,6 +5,7 @@ body {
 #root {
     padding: 30px 14px 0 14px;
     overflow: hidden;
+    height: 100%;
 }
 
 #home {
