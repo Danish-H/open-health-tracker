@@ -3,8 +3,8 @@ import './emotion-category.css'
 import React, { useState } from 'react';
 
 function toggleSelected(id, selected, setSelected, allowMultiple) {  // TODO: find a less jank way to pass in all this information, a context object or something
-    if (id in selected) {
-        setSelected(selected.splice(selected.indexOf(id), 1))
+    if (selected.indexOf(id) > -1) {
+        setSelected(selected.filter(x => x != id))
         return
     }
     if (allowMultiple) {
