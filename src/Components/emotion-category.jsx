@@ -17,7 +17,7 @@ function toggleSelected(id, selected, setSelected, allowMultiple) {  // TODO: fi
 export default function EmotionCategory({name, emotions = [], id, allowMultiple = false}) {
     const [selected, setSelected] = useState([])
     return (
-        <div className="emotion-category">
+        <div id={id} className="emotion-category">
             <h3>{name}</h3>
             <div>
                 {emotions.map(x => {
@@ -25,8 +25,8 @@ export default function EmotionCategory({name, emotions = [], id, allowMultiple 
                     id={x.id} 
                     name={x.name} 
                     icon={"https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/" + x.icon + ".svg"} 
-                    selected={x.id in selected}
-                    onClick={() => {toggleSelected(id, selected, setSelected, allowMultiple)}}/>
+                    selected={selected.indexOf(x.id) > -1}
+                    onClick={() => {toggleSelected(x.id, selected, setSelected, allowMultiple)}}/>
                 })}
             </div>
         </div>
