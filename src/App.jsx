@@ -52,7 +52,7 @@ function App() {
               name={x.name} 
               emotions={x.emotions} 
               allowMultiple={x.allowMultiple} 
-              id={x.id}></EmotionCategory>
+              id={x.id}/>
             })}
           </Slideup>
           </div>
