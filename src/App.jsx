@@ -48,7 +48,11 @@ function App() {
           </div>
           <Slideup onClose={() => {setScreen(Screens.Home)}} shown={screen === Screens.Journal}>
             {summary.emotionCategories.map(x => {
-              return <EmotionCategory name={x.name} emotions={x.emotions} allowMultiple={x.allowMultiple} id={x.id}></EmotionCategory>
+              return <EmotionCategory 
+              name={x.name} 
+              emotions={x.emotions} 
+              allowMultiple={x.allowMultiple} 
+              id={x.id}></EmotionCategory>
             })}
           </Slideup>
           </div>
