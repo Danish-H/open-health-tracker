@@ -9,6 +9,7 @@ import MedicationButton from './Components/medication-button';
 import Slideup from './Components/Slideup';
 import { Screens } from "./screens.ts"
 import EmotionCategory from './Components/emotion-category';
+import Activity from './Components/activity-button';
 
 function App() {
   const [summary, setSummary] = useState({emotionCategories: []});
@@ -49,6 +50,7 @@ function App() {
             </Card>
           </div>
           <Slideup onClose={() => {setScreen(Screens.Home)}} shown={screen === Screens.Journal}>
+            <h2>How are you doing today?</h2>
             {summary.emotionCategories.map(x => {
               return <EmotionCategory 
               name={x.name} 

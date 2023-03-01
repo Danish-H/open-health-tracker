@@ -17,6 +17,14 @@
     height: 100vh; /*Workaround to remove gap below slide ups in small screen mode. might be a better way to do this*/
 }
 
+h2 {
+    text-align: left;
+    color: #555;
+    padding-left: 10px;
+    margin: 0;
+    padding-top: 10px;
+}
+
 /* animated rotating expand button - unsure if it looks nice */
 
 /* .slideup > .expand {
