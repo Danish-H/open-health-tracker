@@ -13,9 +13,14 @@ function toggleSelected(categoryId, id, journalState, updateJournalState, allowM
     else {
         selected = [id]
     }
-    journalState.emotions[categoryId] = selected
-    updateJournalState(journalState)
-    console.log(journalState)
+    var updatedState = {
+        ...journalState,
+        emotions: {
+            ...journalState.emotions,
+        }
+    }
+    updatedState.emotions[categoryId] = selected
+    updateJournalState(updatedState)
 }
 
 export default function EmotionCategory({name, emotions = [], id, allowMultiple = false, journalState, updateJournalState}) {
