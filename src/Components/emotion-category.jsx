@@ -1,21 +1,24 @@
 import EmotionButton from './emotion-button'
 import './emotion-category.css'
-import React, { useState } from 'react';
 
-function toggleSelected(id, selected, setSelected, allowMultiple) {  // TODO: find a less jank way to pass in all this information, a context object or something
+function toggleSelected(categoryId, id, journalState, updateJournalState, allowMultiple) {  // TODO: find a less jank way to pass in all this information, a context object or something
+    var selected = journalState.emotions[categoryId] ?? []
     if (selected.indexOf(id) > -1) {
-        setSelected(selected.filter(x => x != id))
-        return
+        selected = selected.filter(x => x != id)
     }
-    if (allowMultiple) {
-        setSelected([...selected, id])
-        return
+    else if (allowMultiple) {
+        selected = [...selected, id]
+        
     }
-    setSelected([id])
+    else {
+        selected = [id]
+    }
+    journalState.emotions[categoryId] = selected
+    updateJournalState(journalState)
+    console.log(journalState)
 }
 
-export default function EmotionCategory({name, emotions = [], id, allowMultiple = false}) {
-    const [selected, setSelected] = useState([])
+export default function EmotionCategory({name, emotions = [], id, allowMultiple = false, journalState, updateJournalState}) {
     return (
         <div id={id} className="emotion-category">
             <h3>{name}</h3>
@@ -25,8 +28,8 @@ export default function EmotionCategory({name, emotions = [], id, allowMultiple 
                     id={x.id} 
                     name={x.name} 
                     icon={"https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/" + x.icon + ".svg"} 
-                    selected={selected.indexOf(x.id) > -1}
-                    onClick={() => {toggleSelected(x.id, selected, setSelected, allowMultiple)}}/>
+                    selected={journalState.emotions[id] != null && journalState.emotions[id].indexOf(x.id) > -1}
+                    onClick={() => {toggleSelected(id, x.id, journalState, updateJournalState, allowMultiple)}}/>
                 })}
             </div>
         </div>

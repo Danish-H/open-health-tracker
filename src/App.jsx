@@ -13,6 +13,7 @@ import EmotionCategory from './Components/emotion-category';
 function App() {
   const [summary, setSummary] = useState({emotionCategories: []});
   const [screen, setScreen] = useState(Screens.Home);
+  const [journalState, setJournalState] = useState({emotions: {}});
   useEffect(() => {
     GetJournalSummary().then(result => {setSummary(result)});
   }, [])
@@ -52,7 +53,9 @@ function App() {
               name={x.name} 
               emotions={x.emotions} 
               allowMultiple={x.allowMultiple} 
-              id={x.id}/>
+              id={x.id}
+              journalState={journalState}
+              updateJournalState={setJournalState}/>
             })}
           </Slideup>
           </div>
