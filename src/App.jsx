@@ -12,7 +12,7 @@ import EmotionCategory from './Components/emotion-category';
 import Activity from './Components/activity-button';
 
 function App() {
-  const [summary, setSummary] = useState({emotionCategories: []});
+  const [summary, setSummary] = useState({emotionCategories: [], activities: []});
   const [screen, setScreen] = useState(Screens.Home);
   const defaultJournalState = {emotions: {}};
   const [journalState, setJournalState] = useState(defaultJournalState);
@@ -59,6 +59,10 @@ function App() {
               id={x.id}
               journalState={journalState}
               updateJournalState={setJournalState}/>
+            })}
+            <h2>What have you been up to?</h2>
+            {summary.activities.map(x => {
+              return <Activity name={x.name}></Activity>
             })}
           </Slideup>
           </div>
