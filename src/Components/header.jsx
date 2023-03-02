@@ -1,7 +1,7 @@
 import './header.css'
 import { OidcUserStatus, useOidc } from '@axa-fr/react-oidc'
 import React, { useState } from 'react';
-b
+
 export default function Header (props) {
     const [profileMenu, setProfileMenu] = useState(false);
     const { logout } = useOidc();

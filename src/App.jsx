@@ -39,7 +39,7 @@ function App() {
             <Card onClick={() => {setJournalState({emotions: {}}); setScreen(Screens.Journal)}} bgcolor="#DDF6D7" title="How's it going?" showbg>
               <div>
               {summary.emotionCategories.length > 0 && summary.emotionCategories.filter(x => x.default)[0].emotions.map(x => {
-                return <EmojiButton onClick={() => {setJournalState({...defaultJournalState, emotions: {[summary.emotionCategories.filter(x => x.default)[0].id]: [x.id]}}); setScreen(Screens.Journal)}} src={"https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/" + x.icon + ".svg"}/>
+                return <EmojiButton onClick={() => {setJournalState({...defaultJournalState, emotions: {[summary.emotionCategories.filter(x => x.default)[0].id]: [x.id]}}); setScreen(Screens.Journal)}} src={"https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/" + x.icon}/>
               })}
               </div>
             </Card>
