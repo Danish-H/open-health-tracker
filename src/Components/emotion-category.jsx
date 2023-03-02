@@ -32,7 +32,7 @@ export default function EmotionCategory({name, emotions = [], id, allowMultiple 
                     id={x.id} 
                     name={x.name} 
                     icon={"https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/" + x.icon + ".svg"} 
-                    selected={journalState.emotions[id] !== null && journalState.emotions[id].indexOf(x.id) > -1}
+                    selected={journalState.emotions[id] != null && journalState.emotions[id].indexOf(x.id) > -1}
                     onClick={() => {toggleSelected(id, x.id, journalState, updateJournalState, allowMultiple)}}/>
                 })}
             </div>
