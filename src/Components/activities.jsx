@@ -5,7 +5,7 @@ function toggleSelected(id, journalState, updateJournalState) {
     if (journalState.activities.indexOf(id) > -1) {
         updateJournalState({
             ...journalState,
-            "activities": journalState.activities.filter(x => x.id != id)
+            "activities": journalState.activities.filter(x => x != id)
         })
     } else {
         updateJournalState({
@@ -13,7 +13,6 @@ function toggleSelected(id, journalState, updateJournalState) {
             "activities": [...journalState.activities, id]
         })
     }
-    console.log(journalState)
 }
 
 export default function Activities({activities = [], journalState, updateJournalState}) {
