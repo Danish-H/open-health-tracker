@@ -62,7 +62,7 @@ function App() {
             })}
             <h2>What have you been up to?</h2>
             {summary.activities.map(x => {
-              return <Activity name={x.name}></Activity>
+              return <Activity name={x.name} icon={x.icon}></Activity>
             })}
           </Slideup>
           </div>
