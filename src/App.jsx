@@ -10,6 +10,7 @@ import Slideup from './Components/Slideup';
 import { Screens } from "./screens.ts"
 import EmotionCategory from './Components/emotion-category';
 import Activities from './Components/activities';
+import PillMenu from './Components/pill-menu';
 
 function App() {
   const [summary, setSummary] = useState({emotionCategories: [], activities: []});
@@ -36,7 +37,7 @@ function App() {
             <Card bgcolor="#eee" title="This Week in a Glance">
               <p>stuff here</p>
             </Card>
-            <Card onClick={() => {setJournalState({emotions: {}}); setScreen(Screens.Journal)}} bgcolor="#DDF6D7" title="How's it going?" showbg>
+            <Card onClick={() => {setJournalState({defaultJournalState}); setScreen(Screens.Journal)}} bgcolor="#DDF6D7" title="How's it going?" showbg>
               <div>
               {summary.emotionCategories.length > 0 && summary.emotionCategories.filter(x => x.default)[0].emotions.map(x => {
                 return <EmojiButton onClick={() => {setJournalState({...defaultJournalState, emotions: {[summary.emotionCategories.filter(x => x.default)[0].id]: [x.id]}}); setScreen(Screens.Journal)}} src={x.icon}/>
@@ -66,6 +67,7 @@ function App() {
             journalState={journalState}
             updateJournalState={setJournalState}
             ></Activities>
+            <PillMenu></PillMenu>
           </Slideup>
           </div>
         );
