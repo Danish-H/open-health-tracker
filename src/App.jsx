@@ -9,12 +9,12 @@ import MedicationButton from './Components/medication-button';
 import Slideup from './Components/Slideup';
 import { Screens } from "./screens.ts"
 import EmotionCategory from './Components/emotion-category';
-import Activity from './Components/activity-button';
+import Activities from './Components/activities';
 
 function App() {
   const [summary, setSummary] = useState({emotionCategories: [], activities: []});
   const [screen, setScreen] = useState(Screens.Home);
-  const defaultJournalState = {emotions: {}};
+  const defaultJournalState = {emotions: {}, activities: []};
   const [journalState, setJournalState] = useState(defaultJournalState);
   useEffect(() => {
     GetJournalSummary().then(result => {setSummary(result)});
@@ -61,11 +61,11 @@ function App() {
               updateJournalState={setJournalState}/>
             })}
             <h2>What have you been up to?</h2>
-            <div id="activities">
-            {summary.activities.map(x => {
-              return <Activity name={x.name} icon={x.icon}></Activity>
-            })}
-            </div>
+            <Activities 
+            activities={summary.activities}
+            journalState={journalState}
+            updateJournalState={setJournalState}
+            ></Activities>
           </Slideup>
           </div>
         );

@@ -24,6 +24,10 @@
     background-color: #aac4b1;
 }
 
+.activity-button.selected {
+    background-color: #aac4b1;
+}
+
 .activity-button span {
     display: block;
     width: 100%;
