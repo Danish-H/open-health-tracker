@@ -17,6 +17,7 @@ function App() {
   const [screen, setScreen] = useState(Screens.Home);
   const defaultJournalState = {emotions: {}, activities: []};
   const [journalState, setJournalState] = useState(defaultJournalState);
+  const [journalEditMode, setJournalEditMode] = useState(false);
   useEffect(() => {
     GetJournalSummary().then(result => {setSummary(result)});
   }, [])
@@ -68,7 +69,11 @@ function App() {
             updateJournalState={setJournalState}
             ></Activities>
             <PillMenu
-            
+            primaryLabel={journalEditMode ? 'Save' : 'Done'}
+            secondaryColor={journalEditMode ? '#252525' : '#FFFFFF'}
+            secondaryLabel={journalEditMode ? 'Cancel' : 'Edit Mode'}
+            dropShadow={!journalEditMode}
+            secondaryClick={() => {setJournalEditMode(!journalEditMode)}}
             />
           </Slideup>
           </div>

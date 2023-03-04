@@ -15,3 +15,9 @@
     padding-bottom: 8px;
     margin-left: 10px;
 }
+.pill-menu.drop-shadow {
+    box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.15);
+}
+.pill-menu span {
+    cursor: pointer;
+}
