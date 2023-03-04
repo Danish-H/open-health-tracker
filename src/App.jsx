@@ -67,7 +67,9 @@ function App() {
             journalState={journalState}
             updateJournalState={setJournalState}
             ></Activities>
-            <PillMenu></PillMenu>
+            <PillMenu
+            
+            />
           </Slideup>
           </div>
         );
