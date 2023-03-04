@@ -20,11 +20,7 @@
     opacity: 0.8;
 }
 
-.activity-button:active {
-    background-color: #aac4b1;
-}
-
-.activity-button.selected {
+.activity-button:active, .activity-button.selected {
     background-color: #aac4b1;
 }
 

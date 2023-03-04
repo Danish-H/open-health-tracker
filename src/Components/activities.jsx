@@ -20,7 +20,12 @@ export default function Activities({activities = [], journalState, updateJournal
     return (
         <div className="activities">
             {activities.map(x => {
-                return <Activity name={x.name} icon={x.icon} onclick={() => {toggleSelected(x.id, journalState, updateJournalState)}}/>
+                return <Activity 
+                name={x.name} 
+                icon={x.icon} 
+                onclick={() => {toggleSelected(x.id, journalState, updateJournalState)}}
+                selected = {journalState.activities.indexOf(x.id) > -1}
+                />
             })}
         </div>
     )
