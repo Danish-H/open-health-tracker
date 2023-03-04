@@ -61,9 +61,11 @@ function App() {
               updateJournalState={setJournalState}/>
             })}
             <h2>What have you been up to?</h2>
+            <div id="activities">
             {summary.activities.map(x => {
               return <Activity name={x.name} icon={x.icon}></Activity>
             })}
+            </div>
           </Slideup>
           </div>
         );

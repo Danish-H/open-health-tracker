@@ -11,3 +11,8 @@ body {
 #home {
     margin: 8px;
 }
+
+#activities {
+    display: flex;
+    justify-content: center;
+}
