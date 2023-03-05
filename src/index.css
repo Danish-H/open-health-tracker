@@ -19,4 +19,7 @@ body {
     .slideup.open {
         height: 100% !important; /*Workaround to remove gap below slide ups in small screen mode. might be a better way to do this*/
     }
+    .pill-menu {
+        position: absolute !important;
+    }
 }

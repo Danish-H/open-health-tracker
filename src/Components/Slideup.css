@@ -14,7 +14,8 @@
 .slideup.open {
     visibility: visible;
     top: 0%;
-    height: 100vh; /*Workaround to remove gap below slide ups in small screen mode. might be a better way to do this*/
+    height: 120%; /*Workaround to remove gap below slide ups in small screen mode. might be a better way to do this*/
+                  /*Workaround2 to make sure slide up is tall enough*/
 }
 
 h2 {
