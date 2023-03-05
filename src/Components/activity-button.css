@@ -1,10 +1,10 @@
 .activity-button {
-    float: left;
+    display: inline-block;
     background-color: #CAEAD3;
     cursor: pointer;
     border-radius: 15px;
-    height: 72px;
-    width: 72px;
+    min-height: 72px;
+    min-width: 72px;
     margin: 6px;
     position: relative;
 }
@@ -14,7 +14,8 @@
     height: 36px;
     width: 36px;
     margin: 0 auto;
-    position: relative;
+    position: absolute;
+    left: 18px;
     top: 6px;
     text-align: center;
     opacity: 0.8;
